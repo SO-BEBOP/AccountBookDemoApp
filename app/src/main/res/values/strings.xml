@@ -1,0 +1,36 @@
+<!--
+  ~ Copyright (c) 2020. SO-BEBOP. All Rights Reserved.
+  -->
+
+<resources>
+    <string name="app_name">ACCOUNT BOOK</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_year">Year :</string>
+    <string name="label_month">Month :</string>
+    <string name="label_day">Day :</string>
+    <string name="label_fixedcost">FC :</string>
+    <string name="label_plus">mo.Plus :</string>
+    <string name="label_minus">mo.Minus :</string>
+    <string name="value_plus">plus</string>
+    <string name="value_minus">minus</string>
+    <string name="st_yen">円</string>
+    <string name="partition">:</string>
+    <string name="categoryLabel">Category</string>
+    <string name="numberLabel">Amount</string>
+    <string name="add_category">ADD NEW CATEGORY</string>
+    <string name="delete_btn">削除</string>
+    <string name="save_btn">登録</string>
+    <string name="list_btn">履歴</string>
+    <string name="brackets_right">(</string>
+    <string name="brackets_left">)</string>
+    <string name="brackets_slash">/</string>
+    <string name="search_btn">SEARCH</string>
+    <string name="btn_icon_out">OUT</string>
+    <string name="btn_icon_in">IN</string>
+    <string name="btn_icon_fc">FC</string>
+
+    <string-array name="default_category_array">
+        <item>Please select a category</item>
+    </string-array>
+
+</resources>

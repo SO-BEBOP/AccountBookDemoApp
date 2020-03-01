@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020. SO-BEBOP. All Rights Reserved.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ListActivity"
+    tools:showIn="@layout/activity_list">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/FrameSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@android:drawable/editbox_dropdown_light_frame">
+
+            <RelativeLayout
+                android:id="@+id/RelativeSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/inputYear"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/label_year"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/inputMonth"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/inputYear"
+                    android:layout_alignBottom="@+id/inputYear"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toEndOf="@+id/inputYear"
+                    android:autofillHints=""
+                    android:hint="@string/label_month"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/inputDay"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/inputMonth"
+                    android:layout_alignBottom="@+id/inputMonth"
+                    android:layout_marginStart="3dp"
+                    android:layout_toEndOf="@+id/inputMonth"
+                    android:autofillHints=""
+                    android:hint="@string/label_day"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="282dp"
+                    android:layout_height="49dp"
+                    android:layout_below="@+id/inputYear"
+                    android:layout_alignStart="@+id/inputYear"
+                    android:layout_alignEnd="@+id/inputDay"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:autofillHints="@string/categoryLabel"
+                    android:entries="@array/default_category_array"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/inputDay"
+                    android:layout_alignBottom="@+id/spinnerCategory"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginEnd="5dp"
+                    android:backgroundTint="#00C853"
+                    android:text="@string/search_btn"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/FrameRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/FrameSearch"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="3dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

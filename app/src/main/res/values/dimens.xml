@@ -1,0 +1,7 @@
+<!--
+  ~ Copyright (c) 2020. SO-BEBOP. All Rights Reserved.
+  -->
+
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
