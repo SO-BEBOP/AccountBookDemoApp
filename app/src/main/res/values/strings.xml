@@ -28,6 +28,11 @@
     <string name="btn_icon_out">OUT</string>
     <string name="btn_icon_in">IN</string>
     <string name="btn_icon_fc">FC</string>
+    <string name="text_blank">" "</string>
+    <string name="total_month">totalMonth</string>
+    <string name="total_year">totalYear</string>
+    <string name="total_day">totalDay</string>
+    <string name="total_fixedcost">totalFixedCost</string>
 
     <string-array name="default_category_array">
         <item>Please select a category</item>

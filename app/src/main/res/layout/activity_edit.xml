@@ -3,7 +3,8 @@
   ~ Copyright (c) 2020. SO-BEBOP. All Rights Reserved.
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,340 +12,336 @@
     tools:context=".EditActivity">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/RelativeLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:context=".ListActivity">
 
-        <FrameLayout
-            android:id="@+id/FrameChartObj"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/RelativeChartObj"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp">
 
-            <RelativeLayout
-                android:id="@+id/RelativeChartObj"
+            <TextView
+                android:id="@+id/totalMonth"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp">
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/totalYear"
+                android:layout_alignTop="@+id/labelMonth"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/total_month"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#FFB300"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/totalMonth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/totalYear"
-                    android:layout_alignTop="@+id/labelMonth"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:text="totalMonth"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="#FFB300"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/totalYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/labelYear"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/labelYear"
+                android:text="@string/total_year"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#FFB300"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/totalYear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/labelYear"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_toEndOf="@+id/labelYear"
-                    android:text="totalYear"
-                    android:textAllCaps="false"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="#FFB300"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/totalDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/totalMonth"
+                android:layout_alignTop="@+id/labelDay"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/total_day"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#FFB300"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/totalDay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/totalMonth"
-                    android:layout_alignTop="@+id/labelDay"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:text="totalDay"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="#FFB300"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/totalFC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/totalDay"
+                android:layout_alignTop="@+id/labelFixedCost"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/total_fixedcost"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#B388FF"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/totalFC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/totalDay"
-                    android:layout_alignTop="@+id/labelFixedCost"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:text="totalFixedCost"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="#B388FF"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/labelYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineChart"
+                android:layout_alignStart="@+id/lineChart"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/label_year"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/labelYear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/lineChart"
-                    android:layout_alignStart="@+id/lineChart"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="3dp"
-                    android:text="@string/label_year"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/labelMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelYear"
+                android:layout_alignEnd="@+id/labelYear"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="0dp"
+                android:text="@string/label_month"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/labelMonth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/labelYear"
-                    android:layout_alignEnd="@+id/labelYear"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="0dp"
-                    android:text="@string/label_month"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/labelDay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/labelMonth"
-                    android:layout_alignEnd="@+id/labelMonth"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="2dp"
-                    android:text="@string/label_day"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/labelDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelMonth"
+                android:layout_alignEnd="@+id/labelMonth"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/label_day"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
 
 
-                <TextView
-                    android:id="@+id/labelFixedCost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/labelDay"
-                    android:layout_alignEnd="@+id/labelDay"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="@string/label_fixedcost"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/labelFixedCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelDay"
+                android:layout_alignEnd="@+id/labelDay"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/label_fixedcost"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold" />
 
-                <com.github.mikephil.charting.charts.CombinedChart
-                    android:id="@+id/lineChart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="150dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="5dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="spread" />
+            <com.github.mikephil.charting.charts.CombinedChart
+                android:id="@+id/lineChart"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
 
-                <TextView
-                    android:id="@+id/bracketsRightY"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/totalYear"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="2.5dp"
-                    android:layout_toEndOf="@+id/totalYear"
-                    android:text="@string/brackets_right"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/bracketsRightY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/totalYear"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_toEndOf="@+id/totalYear"
+                android:text="@string/brackets_right"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/bracketsLeftY"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightY"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/minusYear"
-                    android:text="@string/brackets_left"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/bracketsLeftY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightY"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/minusYear"
+                android:text="@string/brackets_left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/slashY"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/plusYear"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/plusYear"
-                    android:text="@string/brackets_slash"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/slashY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/plusYear"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/plusYear"
+                android:text="@string/brackets_slash"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/plusYear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightY"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/bracketsRightY"
-                    android:text="@string/value_plus"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="#E53935"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/plusYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightY"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/bracketsRightY"
+                android:text="@string/value_plus"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#E53935"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/minusYear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightY"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/slashY"
-                    android:text="@string/value_minus"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="#1E88E5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/minusYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightY"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/slashY"
+                android:text="@string/value_minus"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#1E88E5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/bracketsRightM"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/totalMonth"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_toEndOf="@+id/totalMonth"
-                    android:text="@string/brackets_right"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/bracketsRightM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/totalMonth"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_toEndOf="@+id/totalMonth"
+                android:text="@string/brackets_right"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/bracketsLeftM"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightM"
-                    android:layout_marginStart="3dp"
-                    android:layout_toEndOf="@+id/minusMonth"
-                    android:text="@string/brackets_left"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/bracketsLeftM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightM"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/minusMonth"
+                android:text="@string/brackets_left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/slashM"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightM"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/plusMonth"
-                    android:text="@string/brackets_slash"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/slashM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightM"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/plusMonth"
+                android:text="@string/brackets_slash"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/plusMonth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightM"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/bracketsRightM"
-                    android:text="@string/value_plus"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="#E53935"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/plusMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightM"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/bracketsRightM"
+                android:text="@string/value_plus"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#E53935"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/minusMonth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightM"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/slashM"
-                    android:text="@string/value_minus"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="#1E88E5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/minusMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightM"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/slashM"
+                android:text="@string/value_minus"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#1E88E5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/bracketsRightD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/totalDay"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginBottom="3dp"
-                    android:layout_toEndOf="@+id/totalDay"
-                    android:text="@string/brackets_right"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/bracketsRightD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/totalDay"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_toEndOf="@+id/totalDay"
+                android:text="@string/brackets_right"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/bracketsLeftD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightD"
-                    android:layout_marginStart="3dp"
-                    android:layout_toEndOf="@+id/minusDay"
-                    android:text="@string/brackets_left"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/bracketsLeftD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightD"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/minusDay"
+                android:text="@string/brackets_left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/slashD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightD"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/plusDay"
-                    android:text="@string/brackets_slash"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+            <TextView
+                android:id="@+id/slashD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightD"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/plusDay"
+                android:text="@string/brackets_slash"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <TextView
-                    android:id="@+id/plusDay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightD"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/bracketsRightD"
-                    android:text="@string/value_plus"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="#E53935"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/plusDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightD"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/bracketsRightD"
+                android:text="@string/value_plus"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#E53935"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <TextView
-                    android:id="@+id/minusDay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/bracketsRightD"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_toEndOf="@+id/slashD"
-                    android:text="@string/value_minus"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="#1E88E5"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/minusDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bracketsRightD"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/slashD"
+                android:text="@string/value_minus"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#1E88E5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            </RelativeLayout>
-        </FrameLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/inputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/FrameChartObj"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_below="@+id/RelativeChartObj"
+            android:layout_alignStart="@+id/RelativeChartObj"
+            android:layout_alignEnd="@+id/RelativeChartObj"
             android:background="@android:drawable/editbox_dropdown_light_frame"
             android:orientation="horizontal">
 
@@ -353,7 +350,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="right"
+                android:autofillHints=""
+                android:gravity="start"
+                android:hint="@string/text_blank"
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -373,132 +372,137 @@
 
         </LinearLayout>
 
-        <FrameLayout
-            android:id="@+id/FrameCategoryList"
+
+        <RelativeLayout
+            android:id="@+id/relativeList"
             android:layout_width="match_parent"
-            android:layout_height="323dp"
+            android:layout_height="match_parent"
             android:layout_above="@+id/footer"
             android:layout_below="@+id/inputLayout"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="3dp">
+            android:layout_alignStart="@+id/inputLayout"
+            android:layout_alignEnd="@+id/inputLayout"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
 
-            <RelativeLayout
-                android:id="@+id/relativeList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/categoryList"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_toStartOf="@+id/addCategoryBtn"
+                android:choiceMode="singleChoice">
 
-                <Button
-                    android:id="@+id/addCategoryBtn"
-                    android:layout_width="40dp"
-                    android:layout_height="53dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:backgroundTint="#E6E4E4"
-                    android:drawableTop="@android:drawable/ic_menu_edit"
-                    android:drawableTint="#FF4081"
-                    android:drawableTintMode="src_atop" />
+            </ListView>
 
-                <Button
-                    android:id="@+id/addFixedCostBtn"
-                    android:layout_width="40dp"
-                    android:layout_height="53dp"
-                    android:layout_below="@+id/addDepositBtn"
-                    android:layout_alignStart="@+id/addDepositBtn"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/button_state"
-                    android:drawableTintMode="src_atop"
-                    android:text="@string/btn_icon_fc"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/addCategoryBtn"
+                android:layout_width="40dp"
+                android:layout_height="53dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:backgroundTint="#E6E4E4"
+                android:drawableTop="@android:drawable/ic_menu_edit"
+                android:drawableTint="#FF4081"
+                android:drawableTintMode="src_atop" />
 
-                <Button
-                    android:id="@+id/addDepositBtn"
-                    android:layout_width="40dp"
-                    android:layout_height="53dp"
-                    android:layout_below="@+id/addWithdrawalBtn"
-                    android:layout_alignStart="@+id/addWithdrawalBtn"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/button_state"
-                    android:drawableTintMode="src_atop"
-                    android:text="@string/btn_icon_in"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/addFixedCostBtn"
+                android:layout_width="40dp"
+                android:layout_height="53dp"
+                android:layout_below="@+id/addDepositBtn"
+                android:layout_alignStart="@+id/addDepositBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/button_state"
+                android:drawableTintMode="src_atop"
+                android:text="@string/btn_icon_fc"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/addWithdrawalBtn"
-                    android:layout_width="40dp"
-                    android:layout_height="53dp"
-                    android:layout_below="@+id/addCategoryBtn"
-                    android:layout_alignStart="@+id/addCategoryBtn"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/button_state"
-                    android:drawableTintMode="src_atop"
-                    android:text="@string/btn_icon_out"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
+            <Button
+                android:id="@+id/addDepositBtn"
+                android:layout_width="40dp"
+                android:layout_height="53dp"
+                android:layout_below="@+id/addWithdrawalBtn"
+                android:layout_alignStart="@+id/addWithdrawalBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/button_state"
+                android:drawableTintMode="src_atop"
+                android:text="@string/btn_icon_in"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
-                <ListView
-                    android:id="@+id/categoryList"
-                    android:layout_width="315dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toStartOf="@+id/addCategoryBtn"
-                    android:choiceMode="singleChoice">
+            <Button
+                android:id="@+id/addWithdrawalBtn"
+                android:layout_width="40dp"
+                android:layout_height="53dp"
+                android:layout_below="@+id/addCategoryBtn"
+                android:layout_alignStart="@+id/addCategoryBtn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/button_state"
+                android:drawableTintMode="src_atop"
+                android:text="@string/btn_icon_out"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
-                </ListView>
-
-            </RelativeLayout>
-
-        </FrameLayout>
-
+        </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/deleteBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="#FFCA28"
                 android:text="@string/delete_btn"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/listBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="#42A5F5"
                 android:text="@string/list_btn"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/saveBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="#EC407A"
                 android:text="@string/save_btn"
                 android:textSize="14sp" />
         </LinearLayout>
